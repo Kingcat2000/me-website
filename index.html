@@ -7,5 +7,29 @@
   </head>
   <body>
 
+
+
+    <div class="centered-container">
+      <button class="button" onclick="playSoundAndRedirect()">Click Me</button>
+
+  </div>
+
+
+  <audio id="buttonSound">
+  <source src="download.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+function playSoundAndRedirect() {
+  var sound = document.getElementById("buttonSound");
+  sound.play(); // Play the sound
+
+  // Redirect to a link after a delay (e.g., 1 second)
+  setTimeout(function() {
+    window.location.href = "https://example.com";
+  }, 1000); // Adjust the delay as needed
+}
+</script>
   </body>
 </html>
